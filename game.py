@@ -32,3 +32,5 @@ while True:
             print("Warm")
         elif abs(num - user_input) > 10:
             print('Cold')
+
+#guessing game
