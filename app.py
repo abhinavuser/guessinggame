@@ -3,7 +3,6 @@ import random
 
 app = Flask(__name__)
 
-# Initialize the number to be guessed
 num = random.randint(1, 100)
 guesses = [0]
 
@@ -21,7 +20,7 @@ def guess():
 
     if user_guess == num:
         feedback = f'Congratulations, You have guessed correctly in only {len(guesses)} guesses'
-        num = random.randint(1, 100)  # Reset the game
+        num = random.randint(1, 100) 
         guesses = [0]
         return jsonify(feedback=feedback)
 
