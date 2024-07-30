@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guessing Game</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to The Guessing Game</h1>
+        <p>I am currently thinking of a number between 1 and 100</p>
+        <p>You are COLD if you are more than 10 away from the number I am thinking of</p>
+        <p>You are WARM if you are within 10 from the number I am thinking of</p>
+        <p>You are COLDER if you guess farther away from your most recent guess</p>
+        <p>You are WARMER if you guess closer to your most recent guess</p>
+        <p>Let's Start</p>
+        <input type="number" id="guess-input" placeholder="Enter your guess">
+        <button onclick="makeGuess()">Submit</button>
+        <p id="feedback"></p>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
